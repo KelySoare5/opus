@@ -6,9 +6,11 @@ import { useState } from "react";
 
 interface NavBarProps {
   handleOpen: () => void;
+  handPerfil:()=>void;
+  acesso:boolean;
 }
 
-export default function Navbar({ handleOpen }: NavBarProps) {
+export default function Navbar({ handleOpen, acesso, handPerfil }: NavBarProps) {
   const [show, setShow] = useState(false);
 
   const handShow = () => {
@@ -74,7 +76,9 @@ export default function Navbar({ handleOpen }: NavBarProps) {
             <S.StyledLink to="">Destaques</S.StyledLink>
             <S.StyledLink to={"/vagas"}>Vagas</S.StyledLink>
             <S.StyledLink to="">Sobre</S.StyledLink>
-            <S.Button onClick={handleOpen}>entrar</S.Button>
+            {acesso?(<S.Button onClick={handPerfil}>perfil</S.Button>):
+            (<S.Button onClick={handleOpen}>entrar</S.Button>)}
+            
           </S.Div>
         </S.Nav>
       </S.Main>
