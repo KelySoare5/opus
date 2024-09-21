@@ -3,6 +3,7 @@ import * as S from "./styles";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import { FiX } from "react-icons/fi";
+import {useState} from 'react';
 
 
 
@@ -22,8 +23,9 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 interface ModalProps {
   handleOpen: () => void;
   open: boolean;
-  handModalForm: () => void;
+  handModalForm: ()=>void;
 }
+
 
 export default function ModalLogin({
   handleOpen,
@@ -32,10 +34,21 @@ export default function ModalLogin({
 }: ModalProps) {
 
   const [candidato, setCandidato] = React.useState('');
+  const [email,setEmail] = useState('');
+  const [senha,setSenha] = useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
     setCandidato(event.target.value);
   };
+
+  const handleChangeGmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+
+};
+  const handleChangePass = (event: React.ChangeEvent<HTMLInputElement>) =>{
+    setSenha(event.target.value);
+  }
+
 
   return (
     <>
@@ -56,9 +69,10 @@ export default function ModalLogin({
               </S.CxLogin>
 
               <S.inputs>
-                <S.titulo type="text" placeholder="Email" />
+                <S.titulo type="text"  placeholder="Email" onChange={handleChangeGmail} />
 
-                <S.titulo type="text" placeholder="Senha" />
+                <S.titulo type="text"  placeholder="Senha"  onChange={handleChangePass} />
+                
               </S.inputs>
 
               <S.divEsquecerSenha>
@@ -108,12 +122,9 @@ export default function ModalLogin({
                     </FormControl>
                   </S.tipoCandidato>
 
-
-
-
-
               <S.cx>
-                <S.btnEntrar onClick={handModalForm}>Entrar</S.btnEntrar>
+              <S.btnEntrar onClick={handModalForm}>entrar </S.btnEntrar>
+             
               </S.cx>
 
               {/* <S.divCadastros>

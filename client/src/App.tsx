@@ -4,6 +4,8 @@ import Home from "./pages/Home/Home";
 import Register from "./pages/Resgiter/Resgiter";
 import Login from "./pages/Login/Login";
 import { SegundaPg } from "./pages/SegundaPagina/SegundaPg";
+import HomeLogin from "./pages/Home/HomeLogin";
+import {User} from "./pages/user/User";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/vagas" element={<SegundaPg />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/HomeLogin" element={<HomeLogin />} />
+        <Route path="/Perfil" element={<User />} />
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
     </>
