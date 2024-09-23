@@ -4,14 +4,14 @@ import InputBase from '@mui/material/InputBase';
 import { theme } from "../../../styles/theme";
 
 export const corAzulFundo = Styled.section`
-  background: ${theme.colors.colorOne};
-  height: 600px;
+  /* background: ${theme.colors.colorOne};
+  height: 600px; */
   
 `
 
 export const conteiner = Styled.div`
   margin: auto;
-  background:${theme.colors.colorTwo};
+  background:${theme.colors.colorOne};
   border: 1px solid blue;
   width: 80%;
   height: 100vh;
@@ -23,10 +23,13 @@ export const pesquisaWrapper = Styled.div`
   border: 1px solid black;
 `
 export const test = Styled.div`
-  background-color: #ffffff;
+  background-color: #D9D9D9;
   margin: 70px 0px;
+  padding: 20px;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 75px;
   border: 5px solid violet;
 
@@ -85,11 +88,14 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 // Tipo de candidato
-export const tipoContratoTexto = Styled.label`
-  margin-left: 150px;
+export const tipoContratoWrapper = Styled.div`
 
 `
-export const tipoContratoWrapper = Styled.select`
+export const tipoContratoTexto = Styled.label`
+
+
+`
+export const tipoContratoSelect = Styled.select`
 
 `
 export const tipoContratoOpcao = Styled.option`
@@ -97,12 +103,13 @@ export const tipoContratoOpcao = Styled.option`
 `;
 
 // Vagas mais recentes
-
-export const filtrarVagasTexto = Styled.label`
-    margin-left: 150px;
+export const filtrarVagasWrapper = Styled.div`
 `
-export const filtrarVagasWrapper = Styled.select`
-
+export const filtrarVagasTexto = Styled.label`
+  
+`
+export const filtrarVagasSelect = Styled.select`
+  border: '1px solid #234560';
 `
 export const filtrarVagas = Styled.option`
   padding: 10px;
@@ -110,6 +117,6 @@ export const filtrarVagas = Styled.option`
 
 
 export const btnFiltrar = Styled.button`
-  margin-left: 200px;
+  
   border-radius: 10px;
 `

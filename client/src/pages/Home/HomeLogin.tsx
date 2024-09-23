@@ -1,5 +1,5 @@
 import Navbar from "../../components/Header/Navbar";
-import { Main } from "../../components/Main/Main";
+import { TelaInicial } from "../../components/TelaInicial/TelaInicial";
 import  { useState } from "react";
 import ModalLogin from "../../components/modal/Modal";
 import ModalForm from "../../components/modal/ModalForm";
@@ -45,7 +45,7 @@ export default function Home() {
       />
       <ModalCadastre open={openCadastre} handleOpen={handleClose} />
 
-      <Main />
+      <TelaInicial />
     </>
   );
 }

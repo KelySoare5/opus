@@ -1,6 +1,7 @@
 import * as S from "./styled";
 import img from "../../assets/img/peploe.png";
-export const Main: React.FC = () => {
+
+export const TelaInicial: React.FC = () => {
   return (
     <S.Main>
       <S.Div>

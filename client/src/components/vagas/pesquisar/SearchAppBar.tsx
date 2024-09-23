@@ -1,4 +1,5 @@
 //import * as React from 'react';
+import { CartVagas } from "../cartVagas/CartVagas";
 import * as S from "./styled"
 
 // import AppBar from '@mui/material/AppBar';
@@ -63,28 +64,31 @@ export const SearchAppBar:React.FC = () => {
                     </S.SearchIconWrapper>
                     <S.StyledInputBase
                       placeholder="Procurar vaga..."
-                      inputProps={{ 'aria-label': 'search' }}
-                    />
+                      inputProps={{ 'aria-label': 'search' }}/>
 
                   </S.Search>
 
 
                   {/* Tipo de candidato */}
-                  <S.tipoContratoTexto>Tipo de contrato: </S.tipoContratoTexto>
                   <S.tipoContratoWrapper>
-                    <S.tipoContratoOpcao>Todas</S.tipoContratoOpcao>
-                    <S.tipoContratoOpcao>Aprendiz</S.tipoContratoOpcao>
-                    <S.tipoContratoOpcao>Estágio</S.tipoContratoOpcao>
-                    <S.tipoContratoOpcao>CLT</S.tipoContratoOpcao>
-                    <S.tipoContratoOpcao>PJ</S.tipoContratoOpcao>
+                    <S.tipoContratoTexto>Tipo de contrato: </S.tipoContratoTexto>
+                    <S.tipoContratoSelect>
+                      <S.tipoContratoOpcao>Todas</S.tipoContratoOpcao>
+                      <S.tipoContratoOpcao>Aprendiz</S.tipoContratoOpcao>
+                      <S.tipoContratoOpcao>Estágio</S.tipoContratoOpcao>
+                      <S.tipoContratoOpcao>CLT</S.tipoContratoOpcao>
+                      <S.tipoContratoOpcao>PJ</S.tipoContratoOpcao>
+                    </S.tipoContratoSelect>
                   </S.tipoContratoWrapper>
 
                   {/* Vagas recentes/semana/mes */}
-                  <S.filtrarVagasTexto>Vagas: </S.filtrarVagasTexto>
-                  <S.filtrarVagasWrapper id="Options">
-                    <S.filtrarVagas value={"recente"}>Recente</S.filtrarVagas>
-                    <S.filtrarVagas value={"semana"}>Uma semana</S.filtrarVagas>
-                    <S.filtrarVagas value={"mes"}>um mês</S.filtrarVagas>
+                  <S.filtrarVagasWrapper>
+                    <S.filtrarVagasTexto>Vagas: </S.filtrarVagasTexto>
+                    <S.filtrarVagasSelect id="Options">
+                      <S.filtrarVagas value={"recente"}>Recente</S.filtrarVagas>
+                      <S.filtrarVagas value={"semana"}>Uma semana</S.filtrarVagas>
+                      <S.filtrarVagas value={"mes"}>um mês</S.filtrarVagas>
+                    </S.filtrarVagasSelect>
                   </S.filtrarVagasWrapper>
                     {/* <ArrowDropDownIcon/> */}
                   
@@ -92,8 +96,8 @@ export const SearchAppBar:React.FC = () => {
                   <S.btnFiltrar>Filtrar</S.btnFiltrar>
             </S.test>
 
+            <CartVagas />
           </S.pesquisaWrapper>
-          
       </S.conteiner>
     </S.corAzulFundo>
       );
