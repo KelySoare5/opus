@@ -32,4 +32,17 @@ export const dataPublicacao = styled.p`
 
 `
 
-export const periodoTrabalhado = styled.p``
+export const periodoTrabalhado = styled.p`
+
+`
+
+
+export const tituloCargo = styled.p`
+
+`
+export const requisitosCargo = styled.p`
+
+`
+export const btnCanditatar = styled.button`
+
+`

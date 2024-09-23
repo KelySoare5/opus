@@ -17,7 +17,10 @@ export const CartVagas:React.FC = () =>{
                     </S.informacaoEmpresa>
                 </S.logoNomeEmpresa>
 
+                <S.tituloCargo>Lacrador senior</S.tituloCargo>
+                <S.requisitosCargo>habitar com a mãe, QI abaixo de 10, usuario de Discord, jogador de League of Legen...</S.requisitosCargo>
 
+                <S.btnCanditatar>Canditatar</S.btnCanditatar>
             </S.CartWrapper>
         </>
     )
