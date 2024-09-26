@@ -1,7 +1,7 @@
 import { styled, alpha } from '@mui/material/styles';
 import Styled from 'styled-components';
 import InputBase from '@mui/material/InputBase';
-import { theme } from "../../../styles/theme";
+import { theme } from "../../styles/theme";
 
 export const corAzulFundo = Styled.section`
   /* background: ${theme.colors.colorOne};
@@ -15,6 +15,11 @@ export const conteiner = Styled.div`
   border: 1px solid blue;
   width: 80%;
   height: 100vh;
+
+  @media(max-width:768px){
+    width: 100%;
+
+  }
 `
 export const pesquisaWrapper = Styled.div`
   margin: auto;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const CartWrapper = styled.section`
     background: #D9D9D9;
     border: 1px solid black;
-    width: 100%;
+    /* width: 100%; */
     padding: 2rem;
     margin: 0 auto;
     /* display: flex; */

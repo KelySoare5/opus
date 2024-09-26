@@ -25,7 +25,7 @@ export const StyledLink = Styled(Link)`
   padding:10px;
   text-decoration:none;
   font-weight:bold;
-  color:${theme.colors.colorFour};// importando o theme usa as colores que la tem
+  color:${theme.colors.colorFour};
   margin-left:60px;
 
   &:hover {
@@ -50,6 +50,7 @@ export const Button = Styled.button`
   border:none;
   font-weight:bold;
   cursor:pointer;
+  
   @media(max-width:768px){
     background:${theme.colors.colorOne};
     color:${theme.colors.colorFour};

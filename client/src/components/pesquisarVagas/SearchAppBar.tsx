@@ -1,5 +1,5 @@
 //import * as React from 'react';
-import { CartVagas } from "../cartVagas/CartVagas";
+import { CartVagasList } from "../cartVagasList/cartVagaslist";
 import * as S from "./styled"
 
 // import AppBar from '@mui/material/AppBar';
@@ -96,7 +96,7 @@ export const SearchAppBar:React.FC = () => {
                   <S.btnFiltrar>Filtrar</S.btnFiltrar>
             </S.test>
 
-            <CartVagas />
+            <CartVagasList />
           </S.pesquisaWrapper>
       </S.conteiner>
     </S.corAzulFundo>
