@@ -22,7 +22,7 @@ export default function Home() {
   };
  
   const handModalForm = ()=>{
-    navigate('/HomeLogin'); 
+    navigate('/HomeLoginEmpresa'); 
    
   }
 

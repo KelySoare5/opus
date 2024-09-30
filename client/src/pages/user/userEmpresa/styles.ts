@@ -1,11 +1,8 @@
 import Styled from 'styled-components';
-import { theme } from "../../styles/theme";
+import { theme } from "../../../styles/theme";
 
 export const DivMain = Styled.div`
-
-    width:100vw;
-    height:100vh;
-    background:${theme.colors.colorThree};
+    background:${theme.colors.colorFour};
 
 
 `;
@@ -39,12 +36,8 @@ export const DivPhoto = Styled.div`
   position: relative;
   top: -70px; 
   display: inline-block;
-  padding-left: 30px;
   margin-bottom: 30px;
-  img {
-  border:2px solid ${theme.colors.colorFour};
-  border-radius:50%;
-  }
+  
 `
 export const Divelements = Styled.div`
 
@@ -52,6 +45,7 @@ export const Divelements = Styled.div`
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
+    width: 850px;
 
 `
 export const DivButtom = Styled.button`
@@ -60,7 +54,6 @@ export const DivButtom = Styled.button`
     background:${theme.colors.colorOne};
     position: relative;
     top: -100px; 
-    margin-right:50px;
     color:${theme.colors.colorFour};
     border:2px solid ${theme.colors.colorFour};
     border-radius:10px;
@@ -75,7 +68,7 @@ export const DivDescrition = Styled.div`
     flex-direction:column;
     position:relative;
     top:-100px;
-    padding:20px;
+
    
 `
 export const DivBox = Styled.div`
@@ -89,7 +82,8 @@ export const DivBox = Styled.div`
      &:nth-child(1) {
         background-color:${theme.colors.colorFour};
     }
-    width:800px;
+    width:850px;
+    border-radius:20px;
 
 
 `
@@ -98,21 +92,63 @@ export const DivBox2 = Styled.div`
     flex-direction:column;
     align-items:center;
     
+  
+`
+export const DivVagas = Styled.div`
+    background:#D9D9D9;
+
+`
+export const DivVagasPosition = Styled.div`
+     display:flex;
+     flex-direction:column;
+     background: #E8E8E8;
+     padding: 12px;
+
+
+`
+export const DivVagasInformacoes = Styled.div`
+     display:flex;
+    flex-direction:row;
+    justify-content:space-between;
 
 `
 
 export const DivNameNumber = Styled.div`
 
+   
     display: flex;
     flex-direction:row;
 
+`
+
+export const DivTitle = Styled.div`
+   text-align:justify;
+   width:600px;
+   padding: 20px;
+`
+export const DivButtoninformacoes = Styled.button`
+    background:${theme.colors.colorFour};
+    color:${theme.colors.colorOne};
+    height:50px;
+    width: 800px;
+    text-align:center;
+    margin: 0px 0px 20px 20px;
+    border:none;
+    border-radius:10px;
+    font-weight:bold;
+`
+
+export const DivInformations = Styled.div`
+    width:850px;
+    padding: 20px;
+   
 `
 
 export const H2 = Styled.h2`
     &:nth-child(1) {
        padding:5px;
     }
-    padding:30px;
+    padding:20px 0px 30px 0px;
 
 `
 

@@ -1,23 +1,19 @@
-import Navbar from "../../components/Header/Navbar";
+import Navbar from "../../../components/Header/Navbar";
 import { useNavigate } from 'react-router-dom';
 import  { useState } from "react";
 import * as S from './styles';
-import logo from "../../assets/img/Logotipo-Vetor(1).png";
-import perfil from "../../assets/img/perfil_exemple.png";
+import logo from "../../../assets/img/opus_logo.jpeg";
+import perfil from "../../../assets/img/perfil_exemple.png";
 
 
-export const User = ()=>{
+export const User: React.FC = ()=>{
 
     const navigate = useNavigate()
     const[acesso,setAcesso] = useState(false)
     const [open, setOpen] = useState(false);
 
-
     const handleOpen = () => setOpen(!open);
 
-   
-      
-    
       const handPerfil =()=>{
         navigate('/'); 
       }
@@ -68,8 +64,7 @@ export const User = ()=>{
 
                     <S.DivBox>
                         <S.P>
-                        Adc. Engenharia Civil, Top 250 no Call of Duty: Warzone, conhecido como Zezim entre 
-                        amigos, e por mais gostoso que eu pareça, eu sou divosiado.
+                        Loja de peças artesanais feitas das mais variados tipos de madeira da região do Piauí.
                         </S.P>
                     </S.DivBox>
 

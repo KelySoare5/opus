@@ -5,7 +5,8 @@ import Register from "./pages/Resgiter/Resgiter";
 import Login from "./pages/Login/Login";
 import { Vagas } from "./pages/Vagas/Vagas";
 import HomeLogin from "./pages/Home/HomeLogin";
-import {User} from "./pages/user/User";
+import {User} from "./pages/user/UserCanditato/User";
+import { UserEmpresa }  from "./pages/user/userEmpresa/empresa";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/HomeLogin" element={<HomeLogin />} />
         <Route path="/Perfil" element={<User />} />
+        <Route path="/HomeLoginEmpresa" element={<UserEmpresa />}/>
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
     </>
