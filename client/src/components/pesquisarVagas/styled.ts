@@ -11,33 +11,57 @@ export const corAzulFundo = Styled.section`
 
 export const conteiner = Styled.div`
   margin: auto;
-  background:${theme.colors.colorOne};
+  /* background:${theme.colors.colorOne}; */
   border: 1px solid blue;
-  width: 80%;
+  width: 90%;
   height: 100vh;
 
   @media(max-width:768px){
     width: 100%;
+    height: 100%
 
   }
 `
 export const pesquisaWrapper = Styled.div`
-  margin: auto;
-  width: 80%;
-  height: 300px;
-  border: 1px solid black;
+  /* margin: auto;
+  width: 80%; */
+  /* height: 300px; */
+
+  border: 1px solid black; 
 `
 export const test = Styled.div`
-  background-color: #D9D9D9;
-  margin: 70px 0px;
+  
+  display: hidden;
+  margin: 70px auto;
   padding: 20px;
-  width: 100%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 75px;
-  border: 5px solid violet;
+  border-radius: 10px;
+  border: 1px solid ${theme.colors.colorOne};
 
+  @media(max-width: 1330px){
+    display: none;
+
+  }
+
+`
+
+export const iconMenu = Styled.button`
+  display: none;
+
+  @media screen and (max-width: 1330px) {
+
+    display: block;
+  }
+`
+
+export const opcaoIconMenu = Styled.ul`
+
+`
+export const opcaoiconMenuList = Styled.li`
 
 `
 

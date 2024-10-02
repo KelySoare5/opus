@@ -1,17 +1,33 @@
 //import * as React from 'react';
 import { CartVagasList } from "../cartVagasList/cartVagaslist";
 import * as S from "./styled"
-
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
-// import IconButton from '@mui/material/IconButton';
-// import Typography from '@mui/material/Typography';
-// import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-// import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useState, useEffect } from 'react';
+import { FiAlignJustify} from "react-icons/fi";
+
+
 
 export const SearchAppBar:React.FC = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Ao clicar no icon é para aparecer o menu
+  
+  
+  // Função que altera o menu completo para IconMenu
+  
+  // const AlterarMenu = () => {
+  //   setIsMenuOpen(!isMenuOpen);
+
+  // };
+  
+  // useEffect(() => {
+  //   addEventListener('resize', AlterarMenu);
+  //   AlterarMenu(); // Para aplicar a lógica imediatamente
+  //   return () => {
+  //     window.removeEventListener('resize', AlterarMenu);
+  //   };
+  // }, []);
+
+
 
   return (
     <S.corAzulFundo>
@@ -19,43 +35,10 @@ export const SearchAppBar:React.FC = () => {
       <S.conteiner>
 
 
-          {/* <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-              <Toolbar>
-            <S.Search>
-                  <S.SearchIconWrapper>
-                    <SearchIcon />
-                  </S.SearchIconWrapper>
-                  <S.StyledInputBase
-                    placeholder="Procurar vaga..."
-                    inputProps={{ 'aria-label': 'search' }}
-                  />
-                </S.Search>
-                {/* <IconButton
-                  size="large"
-                  edge="start"
-                  color="inherit"
-                  aria-label="open drawer"
-                  sx={{ mr: 2 }}
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Typography
-                  variant="h6"
-                  noWrap
-                  component="div"
-                  sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                >
-                  MUI
-                </Typography> */}
-          
-  {/* 
-              </Toolbar>
-            </AppBar>
-          </Box> */} 
+         
+          {/* <S.pesquisaWrapper> */}
 
-
-          <S.pesquisaWrapper>
+            {/* Tela Grandes */}
             <S.test>  
 
               <S.Search>
@@ -95,9 +78,34 @@ export const SearchAppBar:React.FC = () => {
 
                   <S.btnFiltrar>Filtrar</S.btnFiltrar>
             </S.test>
+            
 
+              {/* Telas Pequenas */}
+              <S.iconMenu  onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  <FiAlignJustify />
+                  {/* <S.opcaoIconMenu onClick={AlterarMenu}>
+                    <S.opcaoiconMenuList>Opção 1</S.opcaoiconMenuList>
+                    <S.opcaoiconMenuList>Opção 2</S.opcaoiconMenuList>
+                    <S.opcaoiconMenuList>Opção 3</S.opcaoiconMenuList>
+                  </S.opcaoIconMenu> */}
+              </S.iconMenu>
+
+                  {isMenuOpen && (
+                    <nav className="dropdown-menu">
+                      <ul>
+                        <li>Opção 1</li>
+                        <li>Opção 2</li>
+                        <li>Opção 3</li>
+                        <li>Opção 4</li>
+                      </ul>
+                    </nav>
+                  )}
+  
+
+            
+          
             <CartVagasList />
-          </S.pesquisaWrapper>
+          {/* </S.pesquisaWrapper> */}
       </S.conteiner>
     </S.corAzulFundo>
       );

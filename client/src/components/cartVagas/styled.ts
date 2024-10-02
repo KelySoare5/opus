@@ -5,12 +5,12 @@ export const CartWrapper = styled.section`
     background: #D9D9D9;
     border: 1px solid black;
     /* width: 100%; */
-    padding: 2rem;
+    padding: 10px;
     margin: 0 auto;
-    /* display: flex; */
-
     /* flex-direction:column;
-    align-items: center; */
+    display: flex;
+    align-items: ; 
+   */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 
 `
@@ -39,6 +39,17 @@ export const periodoTrabalhado = styled.p`
 
 export const tituloCargo = styled.p`
 
+`
+export const requisitosCargoWrapper = styled.div`
+    /* border: 1px solid blue; */
+    margin: 10px 0;
+    /* width: 80%; */
+    height: 100px;
+    /* padding: 10px 0px; */
+    /* margin: auto; */
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 `
 export const requisitosCargo = styled.p`
 

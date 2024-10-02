@@ -22,7 +22,9 @@ export const CartVagas:React.FC<cardVagasProps> = ({vagas}) =>{
                 </S.logoNomeEmpresa>
 
                 <S.tituloCargo>{vagas.nome_cargo}</S.tituloCargo>
-                <S.requisitosCargo>{vagas.requisitos}</S.requisitosCargo>
+                <S.requisitosCargoWrapper>
+                    <S.requisitosCargo>{vagas.requisitos}</S.requisitosCargo>
+                </S.requisitosCargoWrapper>
 
                 <S.btnCanditatar>Canditatar</S.btnCanditatar>
             </S.CartWrapper>
