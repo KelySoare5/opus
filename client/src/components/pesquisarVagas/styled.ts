@@ -31,7 +31,7 @@ export const pesquisaWrapper = Styled.div`
 `
 export const test = Styled.div`
   
-  display: hidden;
+
   margin: 70px auto;
   padding: 20px;
   width: 70%;
@@ -42,13 +42,22 @@ export const test = Styled.div`
   border-radius: 10px;
   border: 1px solid ${theme.colors.colorOne};
 
+  
+
+`
+export const OpcaoTelasGrandes = Styled.section`
+  display: flex;
+  /* border: 1px solid violet; */
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 75px;
+  
   @media(max-width: 1330px){
     display: none;
 
   }
-
 `
-
 export const iconMenu = Styled.button`
   display: none;
 

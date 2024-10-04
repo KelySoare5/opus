@@ -2,8 +2,9 @@
 import { CartVagasList } from "../cartVagasList/cartVagaslist";
 import * as S from "./styled"
 import SearchIcon from '@mui/icons-material/Search';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FiAlignJustify} from "react-icons/fi";
+import { VscFilter } from "react-icons/vsc";
 
 
 
@@ -51,6 +52,7 @@ export const SearchAppBar:React.FC = () => {
 
                   </S.Search>
 
+                <S.OpcaoTelasGrandes>
 
                   {/* Tipo de candidato */}
                   <S.tipoContratoWrapper>
@@ -77,12 +79,13 @@ export const SearchAppBar:React.FC = () => {
                   
 
                   <S.btnFiltrar>Filtrar</S.btnFiltrar>
+                </S.OpcaoTelasGrandes>
             </S.test>
             
 
               {/* Telas Pequenas */}
               <S.iconMenu  onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                  <FiAlignJustify />
+                 <VscFilter />
                   {/* <S.opcaoIconMenu onClick={AlterarMenu}>
                     <S.opcaoiconMenuList>Opção 1</S.opcaoiconMenuList>
                     <S.opcaoiconMenuList>Opção 2</S.opcaoiconMenuList>
