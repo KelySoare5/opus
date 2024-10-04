@@ -1,6 +1,6 @@
 import * as S from "./styled"
 import empresa_X from "../../assets/img/empresa_X.png";
-import { Vagas } from "../../data/datos";
+import { Vagas } from "../../data/dados";
 
 interface cardVagasProps {
     vagas: Vagas;

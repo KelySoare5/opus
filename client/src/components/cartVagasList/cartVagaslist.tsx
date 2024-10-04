@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styled";
 import { CartVagas } from "../cartVagas/CartVagas";
-import { empresas } from "../../data/datos";
+import { empresas } from "../../data/dados";
 
 export const CartVagasList: React.FC = () => {
     return(

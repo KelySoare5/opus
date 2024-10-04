@@ -7,10 +7,10 @@ export const CartWrapper = styled.section`
     /* width: 100%; */
     padding: 10px;
     margin: 0 auto;
-    /* flex-direction:column;
+    flex-direction:column;
     display: flex;
     align-items: ; 
-   */
+  
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 
 `
