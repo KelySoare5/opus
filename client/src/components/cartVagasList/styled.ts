@@ -20,5 +20,11 @@ export const ListCardVagas = styled.section`
         /* //Estica no maximo mas que tenha no minimo 500px */
     }
     
+    @media(max-width: 768px){
+        margin: 0;
+        padding: 1rem;
+
+
+  }
 `
 

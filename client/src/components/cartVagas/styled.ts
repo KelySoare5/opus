@@ -6,7 +6,7 @@ export const CartWrapper = styled.section`
     border: 1px solid black;
     /* width: 100%; */
     padding: 10px;
-    margin: 0 auto;
+    margin: 10px auto;
     flex-direction:column;
     display: flex;
     align-items: ; 
