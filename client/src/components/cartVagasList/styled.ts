@@ -5,7 +5,7 @@ export const ListCardVagas = styled.section`
     align-items: center; 
     max-width: 1500px;
     /* height: 100%; */
-    margin: 4rem;
+    margin: 4rem auto;
     padding: 0 2rem;
     justify-content: space-between;
     flex-wrap: wrap; 
@@ -21,7 +21,7 @@ export const ListCardVagas = styled.section`
     }
     
     @media(max-width: 768px){
-        margin: 0;
+        margin: 0px;
         padding: 1rem;
 
 

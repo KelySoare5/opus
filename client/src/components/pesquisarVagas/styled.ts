@@ -3,24 +3,28 @@ import Styled from 'styled-components';
 import InputBase from '@mui/material/InputBase';
 import { theme } from "../../styles/theme";
 
-export const corAzulFundo = Styled.section`
-  /* background: ${theme.colors.colorOne};
-  height: 600px; */
-  
+export const tituloVagasRecentes = Styled.h1`
+  margin: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${theme.colors.colorOne};
+
+  @media (max-width: 768px){
+    margin: 3rem;
+  }
 `
 
 export const conteiner = Styled.div`
   margin: auto;
-  /* background:${theme.colors.colorOne}; */
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 90%;
   height: 100vh;
 
-  @media(max-width:768px){
-    /* width: 100%;
-    height: 100% */
+ @media(max-width: 768px){
+  
 
-  }
+ }
 `
 export const pesquisaWrapper = Styled.div`
   /* margin: auto;
@@ -31,7 +35,6 @@ export const pesquisaWrapper = Styled.div`
 `
 export const test = Styled.div`
   
-
   margin: 70px auto;
   padding: 20px;
   width: 70%;
@@ -41,6 +44,13 @@ export const test = Styled.div`
   height: 75px;
   border-radius: 10px;
   border: 1px solid ${theme.colors.colorOne};
+
+  @media(max-width: 768px){
+    width: 100%;
+    padding: 0;
+    margin: 2rem auto;
+  
+  }
 
   
 
@@ -62,8 +72,10 @@ export const iconMenu = Styled.button`
   display: none;
 
   @media screen and (max-width: 1330px) {
-
+    /* border: 1px solid black; */
     display: block;
+    margin: 0px 10px;
+    
   }
 `
 
@@ -91,6 +103,16 @@ export const Search = styled('div')(({ theme }) => ({
       marginLeft: theme.spacing(1),
       width: 'auto',
     },
+
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      marginLeft: theme.spacing(0.1), // Exemplo de mudança para telas menores
+      width: '70%', // Ajuste o valor conforme sua necessidade
+      
+
+
+    
+    },
   }));
   
 export const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -102,7 +124,10 @@ export const SearchIconWrapper = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-  }));
+
+    
+
+}));
   
 export const StyledInputBase = styled(InputBase)(({ theme }) => ({
   border: '1px solid #333',
@@ -122,6 +147,15 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
         // },
       },
     },
+
+    // [theme.breakpoints.down('md')]: {
+
+
+
+
+
+    
+    // },
   }));
 
 

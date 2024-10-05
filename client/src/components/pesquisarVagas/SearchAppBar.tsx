@@ -3,7 +3,6 @@ import { CartVagasList } from "../cartVagasList/cartVagaslist";
 import * as S from "./styled"
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
-import { FiAlignJustify} from "react-icons/fi";
 import { VscFilter } from "react-icons/vsc";
 
 
@@ -31,7 +30,11 @@ export const SearchAppBar:React.FC = () => {
 
 
   return (
-    <S.corAzulFundo>
+  <>
+  
+      <S.tituloVagasRecentes>
+        Vagas recentes
+      </S.tituloVagasRecentes>
 
       <S.conteiner>
 
@@ -43,14 +46,29 @@ export const SearchAppBar:React.FC = () => {
             <S.test>  
 
               <S.Search>
+
                     <S.SearchIconWrapper>
                       <SearchIcon />
+                      
                     </S.SearchIconWrapper>
+                    
                     <S.StyledInputBase
                       placeholder="Procurar vaga..."
                       inputProps={{ 'aria-label': 'search' }}/>
 
+
+
                   </S.Search>
+
+                     {/* Telas Pequenas */}
+                    <S.iconMenu  onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                      <VscFilter size={18} />
+                        {/* <S.opcaoIconMenu onClick={AlterarMenu}>
+                          <S.opcaoiconMenuList>Opção 1</S.opcaoiconMenuList>
+                          <S.opcaoiconMenuList>Opção 2</S.opcaoiconMenuList>
+                          <S.opcaoiconMenuList>Opção 3</S.opcaoiconMenuList>
+                        </S.opcaoIconMenu> */}
+                    </S.iconMenu>
 
                 <S.OpcaoTelasGrandes>
 
@@ -78,28 +96,17 @@ export const SearchAppBar:React.FC = () => {
                     {/* <ArrowDropDownIcon/> */}
                   
 
-                  <S.btnFiltrar>Filtrar</S.btnFiltrar>
+                  <S.btnFiltrar><VscFilter size={28} /></S.btnFiltrar>
                 </S.OpcaoTelasGrandes>
             </S.test>
             
 
-              {/* Telas Pequenas */}
-              <S.iconMenu  onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                 <VscFilter />
-                  {/* <S.opcaoIconMenu onClick={AlterarMenu}>
-                    <S.opcaoiconMenuList>Opção 1</S.opcaoiconMenuList>
-                    <S.opcaoiconMenuList>Opção 2</S.opcaoiconMenuList>
-                    <S.opcaoiconMenuList>Opção 3</S.opcaoiconMenuList>
-                  </S.opcaoIconMenu> */}
-              </S.iconMenu>
-
+             
                   {isMenuOpen && (
                     <nav className="dropdown-menu">
                       <ul>
-                        <li>Opção 1</li>
-                        <li>Opção 2</li>
-                        <li>Opção 3</li>
-                        <li>Opção 4</li>
+                        <li>Tipo de contrato</li>
+                        <li>Vagas</li>
                       </ul>
                     </nav>
                   )}
@@ -110,7 +117,8 @@ export const SearchAppBar:React.FC = () => {
             <CartVagasList />
           {/* </S.pesquisaWrapper> */}
       </S.conteiner>
-    </S.corAzulFundo>
+  </>
+
       );
 }
 
