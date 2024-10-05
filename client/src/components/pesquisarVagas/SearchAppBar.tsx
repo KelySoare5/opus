@@ -4,6 +4,7 @@ import * as S from "./styled"
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 import { VscFilter } from "react-icons/vsc";
+import { FiltrarVagas } from "../filtrosVagas/FiltrosVagas";
 
 
 
@@ -104,10 +105,7 @@ export const SearchAppBar:React.FC = () => {
              
                   {isMenuOpen && (
                     <nav className="dropdown-menu">
-                      <ul>
-                        <li>Tipo de contrato</li>
-                        <li>Vagas</li>
-                      </ul>
+                      <FiltrarVagas/>
                     </nav>
                   )}
   
