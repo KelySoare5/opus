@@ -46,9 +46,10 @@ export const test = Styled.div`
   border: 1px solid ${theme.colors.colorOne};
 
   @media(max-width: 768px){
-    width: 100%;
-    padding: 0;
-    margin: 2rem auto;
+    width: 90%;
+    padding: 0px;
+    margin: auto;
+    height: 55px;
   
   }
 

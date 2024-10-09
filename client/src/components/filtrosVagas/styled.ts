@@ -1,10 +1,11 @@
 import Styled from "styled-components";
 
+
 export const wrapper = Styled.section`
-    border: 1px solid black;
-    background-color: #ffffff;
-    width: 90%;
-    height: 90px;
+    margin: 5px auto;
+    padding: 5px 10px;
+    width: 60%;
+    /* height: 80px; */
     display: flex;
     justify-content: space-between;
 `
