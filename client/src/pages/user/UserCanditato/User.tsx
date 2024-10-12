@@ -8,23 +8,23 @@ import perfil from "../../../assets/img/perfil_exemple.png";
 
 export const User: React.FC = ()=>{
 
-    const navigate = useNavigate()
-    const[acesso,setAcesso] = useState(false)
+    // const navigate = useNavigate()
+    const[access,setAcesso] = useState(false)
     const [open, setOpen] = useState(false);
 
     const handleOpen = () => setOpen(!open);
 
-      const handPerfil =()=>{
-        navigate('/'); 
+      const handProfile =()=>{
+       console.log("clicou")
       }
 
     return(
 
         <>
-         <Navbar handleOpen={handleOpen} acesso={acesso} handPerfil={handPerfil} />
+         <Navbar handleOpen={handleOpen} access={access} handProfile={handProfile} />
           <S.DivMain>
             <S.DivPosition>
-              <S.DivPerfil>
+              <S.DivProfile>
                 <S.DivLogo>
                   <img src={logo} width={100} height={100}/>
                 </S.DivLogo>
@@ -64,7 +64,8 @@ export const User: React.FC = ()=>{
 
                     <S.DivBox>
                         <S.P>
-                        Loja de peças artesanais feitas das mais variados tipos de madeira da região do Piauí.
+                        Adc. Engenharia Civil, Top 250 no Call of Duty: Warzone, conhecido como Zezim entre 
+                        amigos, e por mais gostoso que eu pareça, eu sou divosiado.
                         </S.P>
                     </S.DivBox>
 
@@ -122,7 +123,7 @@ export const User: React.FC = ()=>{
 
                 </S.DivInformation>
 
-              </S.DivPerfil>
+              </S.DivProfile>
             </S.DivPosition>
 
           </S.DivMain>

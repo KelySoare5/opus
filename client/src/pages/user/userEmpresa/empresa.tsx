@@ -2,28 +2,30 @@ import * as S from "./styles";
 import Navbar from "../../../components/Header/Navbar"
 import empresaLogo from "../../../assets/img/Profile-picture.png";
 import logoOpus from "../../../assets/img/Logotipo-Vetor(1).png";
-
-interface Navbar{
-    handleOpen: () => void;
-  handPerfil:()=>void;
-  acesso:boolean;
-
-}
+import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
 
-export const UserEmpresa = ({
-    handleOpen,
-    handPerfil,
-    acesso,
-}:Navbar)=>{
+//const navigate = useNavigate()
+
+
+export const UserEmpresa = (
+)=>{
+  const [open, setOpen] = useState(false);
+  const [access,setAcess] = useState(false);
+
+  const handleOpen = () => setOpen(!open);
+  const handProfile =()=>{
+   console.log("clicou"); 
+  }
 
     return(
 
         <>
-        <Navbar handleOpen={handleOpen} acesso={acesso} handPerfil={handPerfil} />
+        <Navbar handleOpen={handleOpen} access={access} handProfile={handProfile} />
           <S.DivMain>
             <S.DivPosition>
-              <S.DivPerfil>
+              <S.DivProfile>
                 <S.DivLogo>
                   <img src={logoOpus} width={100} height={100}/>
                 </S.DivLogo>
@@ -102,7 +104,7 @@ export const UserEmpresa = ({
 
                 </S.DivInformation>
 
-              </S.DivPerfil>
+              </S.DivProfile>
             </S.DivPosition>
 
           </S.DivMain>
