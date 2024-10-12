@@ -10,7 +10,7 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   const [openForm, setOpenForm] = useState(false);
   const [openCadastre, setOpenCadastre] = useState(false);
-  const[acesso,setAcesso] = useState(true)
+  const[access,setAcesso] = useState(true)
   const navigate = useNavigate()
   const handleOpen = () => setOpen(!open);
   const handleClose = () => setOpenForm(false);
@@ -25,13 +25,13 @@ export default function Home() {
     navigate('/HomeLogin'); 
     setAcesso(true);
   }
-  const handPerfil =()=>{
+  const handProfile =()=>{
     navigate('/Perfil'); 
   }
 
   return (
     <>
-    <Navbar handleOpen={handleOpen} acesso={acesso} handPerfil={handPerfil} />
+    <Navbar handleOpen={handleOpen} access={access} handProfile={handProfile} />
     <ModalLogin
         handleOpen={handleOpen}
         open={open}

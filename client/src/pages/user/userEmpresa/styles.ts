@@ -14,7 +14,7 @@ export const DivPosition = Styled.div`
     align-items:center;
 
 `
-export const DivPerfil = Styled.div`
+export const DivProfile = Styled.div`
     display:flex;
     flex-direction:column;
 

@@ -3,14 +3,9 @@ import img from "../../assets/img/Logotipo-Vetor(1).png";
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import NavBarProps from "../inteface/interface";
 
-interface NavBarProps {
-  handleOpen: () => void;
-  handPerfil:()=>void;
-  acesso:boolean;
-}
-
-export default function Navbar({ handleOpen, acesso, handPerfil }: NavBarProps) {
+export default function Navbar({ handleOpen, access, handProfile }: NavBarProps) {
   const [show, setShow] = useState(false);
 
   const handShow = () => {
@@ -76,7 +71,7 @@ export default function Navbar({ handleOpen, acesso, handPerfil }: NavBarProps) 
             <S.StyledLink to="">Destaques</S.StyledLink>
             <S.StyledLink to={"/vagas"}>Vagas</S.StyledLink>
             <S.StyledLink to="">Sobre</S.StyledLink>
-            {acesso?(<S.Button onClick={handPerfil}>perfil</S.Button>):
+            {access?(<S.Button onClick={handProfile}>perfil</S.Button>):
             (<S.Button onClick={handleOpen}>entrar</S.Button>)}
             
           </S.Div>

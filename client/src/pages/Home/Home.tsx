@@ -5,12 +5,13 @@ import ModalLogin from "../../components/modal/Modal";
 import ModalForm from "../../components/modal/ModalForm";
 import ModalCadastre from "../../components/modal/ModalCadastre";
 import { useNavigate } from 'react-router-dom';
+import { About } from "../about/about";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
   const [openForm, setOpenForm] = useState(false);
   const [openCadastre, setOpenCadastre] = useState(false);
-  const[acesso,setAcesso] = useState(false)
+  const[access,setAcesso] = useState(false)
   const navigate = useNavigate()
   const handleOpen = () => setOpen(!open);
   const handleClose = () => setOpenForm(false);
@@ -26,13 +27,13 @@ export default function Home() {
    
   }
 
-  const handPerfil =()=>{
+  const handProfile =()=>{
     navigate('/'); 
   }
 
   return (
     <>
-      <Navbar handleOpen={handleOpen} acesso={acesso} handPerfil={handPerfil} />
+      <Navbar handleOpen={handleOpen} access={access} handProfile={handProfile} />
       <ModalLogin
         handleOpen={handleOpen}
         open={open}
@@ -47,6 +48,7 @@ export default function Home() {
       <ModalCadastre open={openCadastre} handleOpen={handleClose} />
 
       <TelaInicial />
+      <About/>
     </>
   );
 }
