@@ -8,7 +8,7 @@ export const About = ()=>{
 
         <>
             <S.DivMain>
-               <S.H1>Sobre nos</S.H1> 
+               <S.H1>Sobre nós</S.H1> 
                <S.DivAbout>
                 <img src={img} width={450} height={300}/>
                 <S.DivText>

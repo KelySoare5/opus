@@ -2,6 +2,7 @@ import Styled from "styled-components";
 import {theme} from "../../styles/theme";
 
 export const DivMain = Styled.div`
+    margin-top: 30px;
     width: 100vw;
     height: 100vh;
     background:${theme.colors.colorFour} ;
@@ -17,14 +18,15 @@ export const DivAbout = Styled.div`
 
 `
 export const DivText = Styled.div`
-    width: 450px;
-    height: 200px;
-    padding: 40px;
+
+    width: 600px;
+    line-height: 1.5;
     text-align:justify;
 
 `
 export const P = Styled.p`
     color: ${theme.colors.colorOne};
+    font-size: 25px;
 `
 
 export const H1 = Styled.h1`
