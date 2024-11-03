@@ -8,7 +8,7 @@ export const DivMain = Styled.div`
 `;
 
 export const DivPosition = Styled.div`
-
+    
     display:flex;
     justify-content:center;
     align-items:center;
@@ -18,19 +18,29 @@ export const DivProfile = Styled.div`
     display:flex;
     flex-direction:column;
 
-
-
 `
 export const DivLogo = Styled.div`
     background:${theme.colors.colorOne};
     width:850px;
+    margin: auto;
     text-align:center;
     padding:40px;
+
+
+    @media (max-width: 768px){
+        width: 400px;
+        
+    }
 `
 
 export const DivInformation = Styled.div`
     background:${theme.colors.colorFour};
-    
+
+
+    @media (max-width: 768px){
+        width: 400px;
+        
+    }
 `
 export const DivPhoto = Styled.div`
   position: relative;
@@ -40,12 +50,16 @@ export const DivPhoto = Styled.div`
   
 `
 export const Divelements = Styled.div`
-
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
     width: 850px;
+
+    @media (max-width: 768px){
+        width: 400px;
+        
+    }
 
 `
 export const DivButtom = Styled.button`
@@ -72,7 +86,6 @@ export const DivDescrition = Styled.div`
    
 `
 export const DivBox = Styled.div`
-
     padding:20px;
     display:flex;
     flex-direction:row;
@@ -85,6 +98,11 @@ export const DivBox = Styled.div`
     width:850px;
     border-radius:20px;
 
+    @media (max-width: 768px){
+        width: 400px;
+        
+    }
+
 
 `
 export const DivBox2 = Styled.div`
@@ -96,6 +114,12 @@ export const DivBox2 = Styled.div`
 `
 export const DivVagas = Styled.div`
     background:#D9D9D9;
+
+    @media (max-width: 768px){
+        margin: auto
+        width: 350px;
+        
+    }
 
 `
 export const DivVagasPosition = Styled.div`
@@ -125,6 +149,11 @@ export const DivTitle = Styled.div`
    text-align:justify;
    width:600px;
    padding: 20px;
+
+   @media (max-width: 768px){
+        width: 320px;
+        
+    }
 `
 export const DivButtoninformacoes = Styled.button`
     background:${theme.colors.colorFour};
@@ -136,12 +165,21 @@ export const DivButtoninformacoes = Styled.button`
     border:none;
     border-radius:10px;
     font-weight:bold;
+
+    @media (max-width: 768px){
+        width: 350px;
+        
+    }
 `
 
 export const DivInformations = Styled.div`
     width:850px;
     padding: 20px;
    
+    @media (max-width: 768px){
+        width: 320px;
+        
+    }
 `
 
 export const H2 = Styled.h2`
