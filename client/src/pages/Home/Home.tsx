@@ -5,7 +5,7 @@ import ModalLogin from "../../components/modal/Modal";
 import ModalForm from "../../components/modal/ModalForm";
 import ModalCadastre from "../../components/modal/ModalCadastre";
 import { useNavigate } from 'react-router-dom';
-import { About } from "../about/about";
+import { About } from "../../components/about/about";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
